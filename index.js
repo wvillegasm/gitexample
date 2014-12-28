@@ -9,8 +9,8 @@ app.get('/', function(req, res) {
 
 app.get('/name/:user_name', function(req, res) {
 	res.status(200);
-	res.set('Content-type', 'text/html');
-	res.send("<html><body><h1>Hello " + req.params.user_name + "</h1></body></html>");
+	res.set('Content-type', 'application/json');
+	res.send("{name: Hello " + req.params.user_name + "}");
 })
 
 app.listen(PORT, function() {
